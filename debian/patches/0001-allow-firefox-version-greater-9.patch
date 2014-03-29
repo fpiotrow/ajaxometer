@@ -1,0 +1,36 @@
+From: Frank Piotrowski <f@pi0.de>
+Date: Sat, 29 Mar 2014 01:01:08 +0100
+Subject: allow firefox version greater 9
+
+---
+ ajaxometer.php |   10 +++-------
+ 1 file changed, 3 insertions(+), 7 deletions(-)
+
+diff --git a/ajaxometer.php b/ajaxometer.php
+index 36ab0fe..8f312de 100644
+--- a/ajaxometer.php
++++ b/ajaxometer.php
+@@ -61,7 +61,7 @@ if (navigator.mimeTypes != null && navigator.mimeTypes.length > 0) {
+   }
+ }
+ 
+-if (/Firefox\/[2-9]./.test(navigator.userAgent)) {
++if (/Firefox\/.test(navigator.userAgent)) {
+ 		hasSVGSupport = true;
+ }
+ 
+@@ -87,12 +87,8 @@ if (hasSVGSupport) {
+ 
+ </script>
+ <noscript>
+-  Unfortunately, your browser either doesn't have support for JavaScript, or 
+-  its not enabled. This speed test requires both. If you do not feel
+-  comfortable enabling JavaScript in your current browser for security 
+-  reasons, try using a more secure browser such as
+-  Mozilla Firefox (<a href="http://www.getfirefox.com/">http://www.getfirefox.com/</a>) or
+-  Opera (<a href="http://www.opera.com/">http://www.opera.com/</a>).
++  Unfortunately, your browser either doesn't have support for JavaScript, or
++  it's not enabled. This speed test requires both. 
+ </noscript>
+ 
+ <!-- End Paste -->
