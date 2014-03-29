@@ -1,0 +1,22 @@
+This package can be build with git-buildpackage.
+
+The source tarball can be downloaded with uscan.
+
+So building the package is:
+1. Clone the repo
+  gbp clone https://github.com/fpiotrow/ajaxometer.git
+
+2. Change to the fresh cloned directory
+  cd ajaxometer
+
+3. Build with gbp
+  gbp buildpackage
+
+Upgrade to a new version:
+1. Check if a new version is available:
+  uscan --report --verbose
+2. Download new upstream tarball if there is a new version (e.g. 1.0.2)
+  uscan --download --verbose
+3. Import the tarball to the git repository
+  gbp import-orig ../ajaxometer_1.0.2.orig.tar.gz
+
