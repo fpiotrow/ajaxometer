@@ -1,2 +1,2 @@
 ajaxometer.* usr/share/ajaxometer
-
+debian/ajaxometer.conf etc/apache2/conf-available/
