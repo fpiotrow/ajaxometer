@@ -1,25 +1,26 @@
 From: Frank Piotrowski <f@pi0.de>
 Date: Sat, 29 Mar 2014 01:01:08 +0100
-Subject: allow firefox version greater 9
+Subject: check svg-support
 
 ---
- ajaxometer.php |   10 +++-------
- 1 file changed, 3 insertions(+), 7 deletions(-)
+ ajaxometer.php | 11 ++++-------
+ 1 file changed, 4 insertions(+), 7 deletions(-)
 
 diff --git a/ajaxometer.php b/ajaxometer.php
-index 36ab0fe..8f312de 100644
+index 36ab0fe..7179384 100644
 --- a/ajaxometer.php
 +++ b/ajaxometer.php
-@@ -61,7 +61,7 @@ if (navigator.mimeTypes != null && navigator.mimeTypes.length > 0) {
+@@ -61,7 +61,8 @@ if (navigator.mimeTypes != null && navigator.mimeTypes.length > 0) {
    }
  }
  
 -if (/Firefox\/[2-9]./.test(navigator.userAgent)) {
-+if (/Firefox\/.test(navigator.userAgent)) {
++if ( document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Shape", "1.0") )
++{
  		hasSVGSupport = true;
  }
  
-@@ -87,12 +87,8 @@ if (hasSVGSupport) {
+@@ -87,12 +88,8 @@ if (hasSVGSupport) {
  
  </script>
  <noscript>
