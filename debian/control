@@ -8,8 +8,8 @@ Homepage: http://ajaxometer.sourceforge.net
 
 Package: ajaxometer
 Architecture: all
-Depends: ${misc:Depends}
-Recommends: apache2 | other-webservers-you-want-to-support | httpd 
+Depends: ${misc:Depends},libapache2-mod-php5 |  php5-cgi | php
+Recommends: apache2 | lighthttpd | httpd 
 Description: web-based download and upload speed test utility
  AJAXOmeter is a web-based bandwidth testing utility implemented in PHP, SVG,
  and JavaScript. It tests http-request latency and upload/download speeds to
